@@ -1,22 +1,18 @@
 {
-  "name": "graphicsfinal",
+  "name": "not-lab-10",
   "version": "1.0.0",
-  "description": "final's project for graphics upper level",
+  "description": "",
   "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
-    "dev": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dracoken/GraphicsFinal.git"
-  },
-  "author": "Dyllin Wood, Jake Shepard",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dracoken/GraphicsFinal/issues"
-  },
-  "homepage": "https://github.com/dracoken/GraphicsFinal#readme",
   "dependencies": {
     "express": "^4.18.2"
   }
