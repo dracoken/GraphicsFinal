@@ -219,10 +219,11 @@ export function mat4_set_lookat_deprecated(mat4, eye, center, up) {
 }
 
 export function mat4_set_lookat(mat4, eye, center, up) {
-    let forward = [center[0] - eye[0], center[1] - eye[1], center[2] - eye[2]];
-    let up_unit = [up[0], up[1], up[2]]
-    let side = [0,0,0];
+    let forward = [center[0] - eye[0], center[1] - eye[1], center[2] - eye[2]];//camera's center[x]-camera's eye[x] and y and z
+    let up_unit = [up[0], up[1], up[2]]  //looking up and down (same position)
+    let side = [0,0,0]; //will end up being the cross product of forward and up
 
+    //i think this is to keep the angle looking at the center of the screen changing so it is alsway "cosistant" with the camera perspective
     vec3_normalize(forward);
     vec3_normalize(up_unit);
     vec3_cross(side, forward, up_unit);

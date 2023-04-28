@@ -15,9 +15,13 @@ struct Light {
     vec3 La;
     vec3 Ld;
     vec3 Ls;
+
+
 };
 
 uniform Light u_Lights[2];
+
+vec4 u_color;
 
 
 struct Shadowmap {
@@ -37,6 +41,7 @@ void main() {
 
     mat4 PVM0 = u_Shadowmaps[0].PVM;                            // model-view-projection matrix of shadowmap
     vec4 light0_world = u_Lights[0].position;                   // light position in camera space
+    vec4 light0_color = u_color; // light
 
     vec3 ray_light = smooth_point_world - light0_world.xyz;     // light ray:  light position -- this surface position
 
@@ -89,6 +94,7 @@ void main() {
     color += k_ambient * I_ambient;                             // ambient reflection
     color += k_diffuse * n_dot_l * I_light0;                    // diffuse reflection
     color += k_specular * pow(r_dot_v, shiny) * I_light0;       // specular reflection
+
 
     FragColor = vec4(color, 1.0);
 //    FragColor = vec4(tex_color.xyz * float(in_clip), 1.0);

@@ -77,11 +77,11 @@ void main() {
     float shiny = 10.0;
 
     if (u_Mode == 0) {
-        vec3 color = vec3(0.0, 0.0, 0.0);
+        vec3 color = vec3(1.0, 1.0, 1.0);
         color += k_ambient * I_ambient;                           // ambient reflection
         color += k_diffuse * n_dot_l * I_light0;                  // diffuse reflection
         color += k_specular * pow(r_dot_v, shiny) * I_light0;     // specular reflection
-        v_Color = vec4(color, 1.0);
+        v_Color = vec4(color, 2.0);
     } else {
         vec3 color = vec3(0.0, 0.5, 1.0);
         v_Color = vec4(color, 1.0);

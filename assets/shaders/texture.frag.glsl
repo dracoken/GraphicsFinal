@@ -17,6 +17,7 @@ flat in vec3 flat_light;
 smooth in vec2 smooth_texcoord;
 uniform sampler2D u_SamplerShadow;
 
+uniform vec4 u_Color;
 
 out vec4 FragColor;
 
@@ -30,6 +31,7 @@ void main() {
     float n_dot_l = max(dot(normal, light), 0.0);               // cos(theta)
     float r_dot_v = max(dot(reflect, viewer), 0.0);             // cos(phi)
 
+
     vec3 I_ambient = vec3(1.0, 1.0, 1.0);                       // ambient light intensity
     vec3 I_light0 = vec3(1.0, 1.0, 1.0);                        // point light intensity
     vec3 k_ambient = vec3(0.1);
@@ -37,7 +39,7 @@ void main() {
     vec3 k_specular = vec3(0.5);
     float shiny = 20.0;
 
-    vec3 color = vec3(0.0, 0.0, 0.0);
+    vec3 color = vec3(0.90, 0.0, 0.0);
     color += k_ambient * I_ambient;                             // ambient reflection
     color += k_diffuse * n_dot_l * I_light0;                    // diffuse reflection
     color += k_specular * pow(r_dot_v, shiny) * I_light0;       // specular reflection
@@ -46,5 +48,5 @@ void main() {
 
     vec4 texture_color = texture(u_SamplerShadow, smooth_texcoord);
     FragColor = texture_color;
-//    FragColor = vec4(smooth_texcoord, 0.0, 1.0);
+    FragColor = vec4(smooth_texcoord, 0.0, 1.0);
 }

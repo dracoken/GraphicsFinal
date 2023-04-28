@@ -14,10 +14,10 @@ export class Light {
         this.vec3_color = m.vec3_new(1.0, 0.0, 1.0);
         
         if (light_type === LightType.LIGHT_DIRECTIONAL) {
-            this.vec4_position = m.vec4_new(1.0, 0.0, 0.0, 0.0);
-            this.vec4_position_camera = m.vec4_new(200.0, 0.0, 0.0, 1.0);
-            this.vec3_color = m.vec3_new(1.0, 1.0, 1.0);
-            this.vec3_direction = m.vec3_new(1.0, 1.0, 1.0);
+            this.vec4_position = m.vec4_new(0.0, 0.0, 0.0, 1.0);
+            this.vec4_position_camera = m.vec4_new(1.0, 1.0, 0.0, 1.0);
+            this.vec3_color = m.vec3_new(1.0, 0.0, 0.0);
+            this.vec3_direction = m.vec3_new(1.0, 0.0, 0.0);
             this.spot_cutoff = Math.PI;
             this.spot_focus = 1.0;
         } else if (light_type == LightType.LIGHT_POINT) {
@@ -27,7 +27,7 @@ export class Light {
         } else if (light_type == LightType.LIGHT_SPOT) {
             this.vec4_position = m.vec4_new(0.0, 0.0, 0.0, 1.0);
             this.vec4_position_camera = m.vec4_new(1.0, 0.0, 0.0, 1.0);
-            this.vec3_color = m.vec3_new(1.0, 1.0, 1.0);
+            this.vec3_color = m.vec3_new(1.0, 0.0, 0.0);
             this.vec3_direction = m.vec3_new(1.0, 0.0, 0.0);
             this.spot_cutoff = Math.PI;
             this.spot_focus = 1.0;

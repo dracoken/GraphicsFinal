@@ -6,6 +6,7 @@
 
 */
 
+//this file
 
 in vec3 a_Position;  // vertex position
 in vec3 a_Normal;    // vertex normal
@@ -33,6 +34,8 @@ flat out vec3 flat_light;
 void main() {
     
     LightSource light0 = u_Lights[0];
+
+    LightSource light1 = u_Lights[1];
 
     // transform vertex
     vec4 point_model = vec4(a_Position.xyz, 1.0);               // homogenize point coordinates
