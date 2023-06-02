@@ -1,6 +1,6 @@
 This is was a School group project made by Jacob Shepard and Dyllin Wood, 
 it ultilizes some portions of code from a previous lab in the class. 
-However, what we did program/do was rendering the 3d objects that we created in blender, and lastly animation for those rendered objects
+However, what we did program was rendering the 3d objects that we created in blender, and lastly animation for those rendered objects.
 
 
 
