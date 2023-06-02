@@ -1,12 +1,7 @@
 #version 300 es
-/*
 
-  author: Stephan Ohl
-  Educational Code
 
-*/
 
-//this file
 
 in vec3 a_Position;  // vertex position
 in vec3 a_Normal;    // vertex normal

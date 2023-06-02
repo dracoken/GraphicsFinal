@@ -1,9 +1,3 @@
-/*
-
-  author: Stephan Ohl
-  Educational Code
-
-*/
 
 attribute vec3 a_Position;  // vertex position
 attribute vec3 a_Normal;    // vertex normal

@@ -1,10 +1,4 @@
 #version 300 es
-/*
-
-  author: Stephan Ohl
-  Educational Code
-
-*/
 
 struct Light {
     vec4 position;          // light position in world frame

@@ -1,9 +1,3 @@
-/*
-
-  author: Stephan Ohl
-  Educational Code
-
-*/
 
 precision highp float;
 

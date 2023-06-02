@@ -1,10 +1,4 @@
 #version 300 es
-/*
-
-  author: Stephan Ohl
-  Educational Code
-
-*/
 
 
 in vec3 a_Position;  // vertex position

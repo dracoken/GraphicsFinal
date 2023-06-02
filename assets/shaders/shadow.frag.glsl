@@ -1,10 +1,5 @@
 #version 300 es
-/*
 
-  author: Stephan Ohl
-  Educational Code
-
-*/
 
 
 precision highp float;
